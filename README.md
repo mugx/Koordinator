@@ -12,7 +12,7 @@ It also helps to manage the back button and the iOS 13 swipe down behaviour ([`i
 
 # Example
 
-- Let's say we want to push a view controller into a navigation stack, just need to call the `start` function:
+- Let's say we want to push a view controller into a navigation stack, just need to call the `start` function of the `BaseCoordinator`:
 
 
 ```
@@ -24,7 +24,7 @@ let coordinator = DemoCoordinator(presenter: myNavigation)
 coordinator.start()
 ```
 
-The coordinator could be simply defined as:
+The coordinator could be simply defined as a subclass of `BaseCoordinator`:
 
 ```
 class DemoCoordinator: BaseCoordinator {
